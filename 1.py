@@ -35,4 +35,4 @@ model.compile(optimizer='rmsprop',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-model.fit(data, labels, epochs=100, batch_size=32)
+model.fit(x_train, y_train, epochs=100, batch_size=32)
