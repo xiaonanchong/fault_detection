@@ -8,7 +8,7 @@ from keras.layers import Dense, Activation
 
 # generate training data
 N = 3 #1000
-L = 20 #2000
+L = 2 #2000
 
 x_train = np.empty((N*2, L))
 y_train = np.empty((N*2, 1))
