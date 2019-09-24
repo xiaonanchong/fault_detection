@@ -50,3 +50,4 @@ pl.plot(axis_xf,xf_abs)
 pl.axis('tight')
  
 pl.show()
+pl.save('plot.png')
