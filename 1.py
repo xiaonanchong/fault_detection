@@ -26,6 +26,7 @@ for i in range(N):
 	y_train.append([1])
 	y_train.append([0])
 	
+x_train = np.asarray(x_train, dtype=np.float32)
 x_train = x_train.reshape((N*2, L))
 
 model = Sequential()
