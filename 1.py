@@ -15,7 +15,7 @@ y_train = []
 for i in range(N):
 	r1 = random.gauss(0,0.5)
 	r2 = random.gauss(0,0.5)
-	x1 = [math.sin(i*r1 + r2) for i in L]
+	x1 = [math.sin(i*r1 + r2) for i in range(L)]
 	
 	noise = [random.uniform(0,1) for i in range(L)]
 	x2 = x1 + noise
