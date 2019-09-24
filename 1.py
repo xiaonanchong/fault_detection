@@ -25,7 +25,7 @@ for i in range(N):
 	y_train.append([1])
 	y_train.append([0])
 	
-print(data)
+print(x_train)
 
 model = Sequential()
 model.add(Dense(512, activation='relu', input_dim=2000))
