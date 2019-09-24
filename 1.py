@@ -10,8 +10,8 @@ from keras.layers import Dense, Activation
 N = 3 #1000
 L = 20 #2000
 
-x_train = []
-y_train = []
+x_train = np.empty((N*2, L))
+y_train = np.empty((N*2, 1))
 for i in range(N):
 	r1 = random.gauss(0,0.5)
 	r2 = random.gauss(0,0.5)
@@ -21,13 +21,10 @@ for i in range(N):
 	noise = [random.uniform(0,1) for i in range(L)]
 	x2 = x1 + noise
 	
-	x_train.append(x1)
-	x_train.append(x2)
-	y_train.append([1])
-	y_train.append([0])
-	
-x_train = np.asarray(x_train, dtype=np.float32)
-x_train = x_train.reshape((N*2, L))
+	x_train[2*i] = x1
+	x_train[2*i+1] = x2
+	y_train[2*i] = 1
+	y_train[2*i+1] = 0
 
 model = Sequential()
 model.add(Dense(512, activation='relu', input_dim=L))
