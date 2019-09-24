@@ -17,7 +17,7 @@ axis_x = np.linspace(0,3,num=N)
 x = [math.sin(i) for i in n]
 pl.subplot(221)
 pl.plot(axis_x,x)
-pl.title(u'5Hz的正弦信号')
+pl.title('0')
 pl.axis('tight')
  
 
