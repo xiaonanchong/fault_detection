@@ -20,6 +20,7 @@ for i in range(N):
 	
 	noise = [random.uniform(0,1) for i in range(L)]
 	x2 = x1 + noise
+	print(x2)
 	
 	x_train[2*i] = x1
 	x_train[2*i+1] = x2
