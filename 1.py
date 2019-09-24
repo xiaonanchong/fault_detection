@@ -18,8 +18,8 @@ for i in range(N):
 	x1 = [math.sin(i*r1 + r2) for i in range(L)]
 	print(x1)
 	
-	noise = [random.uniform(0,1) for i in range(L)]
-	x2 = x1 + noise
+	noise = [random.uniform(0,0.3) for i in range(L)]
+	x2 = [x1[j] + noise[j] for j in range(L)]
 	print(x2)
 	
 	x_train[2*i] = x1
