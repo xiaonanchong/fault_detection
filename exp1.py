@@ -3,6 +3,7 @@ from keras.models import Sequential
 from keras.layers import Dense, Activation
 import numpy as np
 import numpy.matlib
+import random
 
 # generate 2*N training data
 N = 1000
@@ -34,4 +35,5 @@ model.compile(optimizer='rmsprop',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
+x_trian = random.shuffle(x_train)
 model.fit(x_train, y_train, epochs=100, batch_size=32)
