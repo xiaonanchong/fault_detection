@@ -26,5 +26,11 @@ for i in range(N):
 	y[2*i] = 1
 	y[2*i+1] = 0
 
+# shuffle data
+indices = np.arange(X.shape[0])
+np.random.shuffle(indices)
+x = x[indices]
+y = y[indices]
+
 np.save('x.npy', x)
 np.save('y.npy', y)
