@@ -28,7 +28,7 @@ model.compile(optimizer='rmsprop',
 
 x = np.load('x.npy')
 y = np.load('y.npy')
-x = np.expand_dims(x, 0)
+x = np.expand_dims(x, 2)
 print(x.shape, y.shape)
 history = model.fit(x, y, validation_split=0.33, epochs=100, batch_size=100)
 
