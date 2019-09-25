@@ -19,7 +19,7 @@ for i in range(N):
 	f = s
 	index = np.random.randint(0, L-l)
 	for j in range(l):
-		f[j+index] += f1[index]
+		f[j+index] += f1[j]
 	
 	x[2*i] = s
 	x[2*i+1] = f
