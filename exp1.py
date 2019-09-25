@@ -17,7 +17,7 @@ for i in range(N):
 	x1 = sigma * np.matlib.randn(L) + mu
 	print(x1)
 	
-	sigma = 1.2
+	sigma = 1.1
 	mu = 0
 	x2 = sigma * np.matlib.randn(L) + mu
 	print(x2)
