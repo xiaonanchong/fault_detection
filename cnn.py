@@ -19,6 +19,7 @@ model.add(Conv1D(filters=512, kernel_size=10, strides=5, padding='valid', activa
 model.add(MaxPooling1D(pool_size=2, strides=2, padding='valid')) #(512, 200)
 model.add(Conv1D(filters=64, kernel_size=5, strides=2, padding='valid', activation='relu')) #(64, 100)
 model.add(MaxPooling1D(pool_size=2, strides=2, padding='valid')) #(64, 50)
+model.add(keras.layers.core.Flatten(name="reshape_layer"))
 model.add(Dense(1, activation='sigmoid'))
 
 model.compile(optimizer='rmsprop',
@@ -27,6 +28,8 @@ model.compile(optimizer='rmsprop',
 
 x = np.load('x.npy')
 y = np.load('y.npy')
+x = np.expand_dims(x, 0)
+y = np.expand_dims(y, 0)
 print(x.shape, y.shape)
 history = model.fit(x, y, validation_split=0.33, epochs=100, batch_size=100)
 
