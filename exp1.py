@@ -37,7 +37,7 @@ model.compile(optimizer='rmsprop',
               metrics=['accuracy'])
 
 x_trian = random.shuffle(x_train)
-history = model.fit(x_train, y_train, epochs=100, batch_size=32)
+history = model.fit(x_train, y_train, validation_split=0.33, epochs=1, batch_size=32)
 
 
 # list all data in history
