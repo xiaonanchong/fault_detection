@@ -1,7 +1,6 @@
 import keras
 from keras.models import Sequential
-import keras.layers
-from keras.layers import Dense, Activation
+from keras.layers import Dense, Activation, Conv1D, MaxPooling1D
 import numpy as np
 import numpy.matlib
 import random
@@ -16,10 +15,10 @@ model.add(Dense(64, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 '''
 model = Sequential()
-model.add(layers.Conv1D(filters=512, kernel_size=10, strides=5, padding='valid', activation='relu')) #(512, 400)
-model.add(layers.MaxPooling1D(pool_size=2, strides=2, padding='valid')) #(512, 200)
-model.add(layers.Conv1D(filters=64, kernel_size=5, strides=2, padding='valid', activation='relu')) #(64, 100)
-model.add(layers.MaxPooling1D(pool_size=2, strides=2, padding='valid')) #(64, 50)
+model.add(Conv1D(filters=512, kernel_size=10, strides=5, padding='valid', activation='relu')) #(512, 400)
+model.add(MaxPooling1D(pool_size=2, strides=2, padding='valid')) #(512, 200)
+model.add(Conv1D(filters=64, kernel_size=5, strides=2, padding='valid', activation='relu')) #(64, 100)
+model.add(MaxPooling1D(pool_size=2, strides=2, padding='valid')) #(64, 50)
 model.add(Dense(1, activation='sigmoid'))
 
 model.compile(optimizer='rmsprop',
