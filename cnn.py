@@ -16,8 +16,9 @@ model.compile(optimizer='rmsprop',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-x_trian = random.shuffle(x_train)
-history = model.fit(x_train, y_train, validation_split=0.33, epochs=100, batch_size=32)
+x = np.load('x.npy')
+y = np.load('y.npy')
+history = model.fit(x, y, validation_split=0.33, epochs=100, batch_size=32)
 
 
 # list all data in history
