@@ -1,5 +1,6 @@
 import keras
 from keras.models import Sequential
+import keras.layers
 from keras.layers import Dense, Activation
 import numpy as np
 import numpy.matlib
