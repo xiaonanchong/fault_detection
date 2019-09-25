@@ -4,6 +4,7 @@ from keras.layers import Dense, Activation
 import numpy as np
 import numpy.matlib
 import random
+import matplotlib.pyplot as plt
 
 # generate 2*N training data
 N = 1000
@@ -36,4 +37,25 @@ model.compile(optimizer='rmsprop',
               metrics=['accuracy'])
 
 x_trian = random.shuffle(x_train)
-model.fit(x_train, y_train, epochs=100, batch_size=32)
+history = model.fit(x_train, y_train, epochs=100, batch_size=32)
+
+
+# list all data in history
+print(history.history.keys())
+# summarize history for accuracy
+plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
+# summarize history for loss
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
+plt.savefig("train.png")
