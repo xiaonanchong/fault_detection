@@ -12,6 +12,8 @@ s3 = np.random.normal(20, 2, N)
 
 s = s1 + s2 + s3
 
+print(s)
+
 '''
 x_train = np.empty((N*2, L))
 y_train = np.empty((N*2, 1))
