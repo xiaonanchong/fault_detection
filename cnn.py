@@ -18,7 +18,7 @@ model.compile(optimizer='rmsprop',
 
 x = np.load('x.npy')
 y = np.load('y.npy')
-history = model.fit(x, y, validation_split=0.33, epochs=100, batch_size=32)
+history = model.fit(x, y, validation_split=0.33, epochs=100, batch_size=100)
 
 
 # list all data in history
