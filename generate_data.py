@@ -17,7 +17,7 @@ for i in range(N):
 	s = s1 + s2 + s3
 	
 	f = s
-	index = random.randint(0, L-l)
+	index = np.random.randint(0, L-l)
 	for j in range(l):
 		f[j+index] += f1[index]
 	
