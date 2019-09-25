@@ -2,6 +2,7 @@ import keras
 from keras.models import Sequential
 from keras.layers import Dense, Activation
 import numpy as np
+import numpy.matlib
 
 # generate 2*N training data
 N = 1000
