@@ -27,7 +27,7 @@ for i in range(N):
 	y[2*i+1] = 0
 
 # shuffle data
-indices = np.arange(X.shape[0])
+indices = np.arange(x.shape[0])
 np.random.shuffle(indices)
 x = x[indices]
 y = y[indices]
