@@ -13,18 +13,17 @@ y = np.load(args.y_path+'.npy')
 L = 2000
 l = 200
 s1 = np.random.normal(1.0, 2.0, L) 
-f1 = np.random.normal(1.0, 2.0, l)
+f1 = np.random.normal(0.4, 2.0, l)
 s = s1
 f = s
 index = np.random.randint(0, L-l)
 for j in range(l):
 	f[j+index] += f1[j]
 
-plt.title("Matplotlib demo") 
-plt.xlabel("x axis caption") 
-plt.ylabel("y axis caption") 
+plt.title("nomral signal") 
 plt.plot(s)
+plt.savefig('normal_data_sample.png')
+
+plt.title("fault signal") 
 plt.plot(f)
-plt.legend(['normal signal', 'fault signal'], loc='upper left')
-plt.show()
-plt.savefig('data_sample.png')
+plt.savefig('fault_data_sample.png')
