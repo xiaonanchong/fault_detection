@@ -18,14 +18,16 @@ for i in range(N):
 	s1 = np.random.normal(1.0, 2.0, L) 
 	s2 = np.random.normal(0.5, 2.0, L)
 	s3 = np.random.normal(2.0, 2.0, L)
-	f1 = np.random.normal(1.0, 2.0, l)
+	f0 = np.random.normal(0.4, 2.0, l)
 
-	s = s1 #+ s2 + s3
-	
-	f = s
+	s = s1
+	f1 = np.zeros(L)
 	index = np.random.randint(0, L-l)
 	for j in range(l):
-		f[j+index] += f1[j]
+		f1[j+index] += f0[j]
+	f = s1+f1
+
+	print('check:',np.array_equal(f,s))
 	
 	x[2*i] = s
 	x[2*i+1] = f
