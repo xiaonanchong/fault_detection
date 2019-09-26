@@ -41,10 +41,9 @@ x = np.load(args.x_path+'.npy')
 y = np.load(args.y_path+'.npy')
 x = np.expand_dims(x, 2)
 print(x.shape, y.shape)
-print(model.summary())
 
 history = model.fit(x, y, validation_split=0.33, epochs=100, batch_size=100)
-
+print(model.summary())
 
 # list all data in history
 print(history.history.keys())
