@@ -21,14 +21,16 @@ model.add(Dense(64, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 '''
 model = Sequential()
-model.add(Conv1D(filters=1024, kernel_size=4, strides=1, padding='valid', activation='relu')) 
+model.add(Conv1D(filters=512, kernel_size=16, strides=4, padding='valid', activation='relu')) 
 model.add(MaxPooling1D(pool_size=2, strides=2, padding='valid')) 
-model.add(Conv1D(filters=512, kernel_size=8, strides=2, padding='valid', activation='relu')) 
+model.add(Conv1D(filters=256, kernel_size=8, strides=2, padding='valid', activation='relu')) 
 model.add(MaxPooling1D(pool_size=2, strides=2, padding='valid')) 
-model.add(Conv1D(filters=64, kernel_size=16, strides=4, padding='valid', activation='relu')) 
+model.add(Conv1D(filters=128, kernel_size=4, strides=1, padding='valid', activation='relu')) 
+model.add(MaxPooling1D(pool_size=2, strides=2, padding='valid')) 
+model.add(Conv1D(filters=64, kernel_size=2, strides=1, padding='valid', activation='relu')) 
 model.add(MaxPooling1D(pool_size=2, strides=2, padding='valid')) 
 model.add(Flatten())
-model.add(Dense(1))
+model.add(Dense(2), activation='softmax')
 
 model.compile(optimizer='rmsprop',
               loss='binary_crossentropy',
@@ -38,6 +40,8 @@ x = np.load(args.x_path+'.npy')
 y = np.load(args.y_path+'.npy')
 x = np.expand_dims(x, 2)
 print(x.shape, y.shape)
+print(model.summary())
+
 history = model.fit(x, y, validation_split=0.33, epochs=100, batch_size=100)
 
 
