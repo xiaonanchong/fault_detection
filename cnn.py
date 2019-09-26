@@ -6,6 +6,12 @@ import numpy.matlib
 import random
 import matplotlib.pyplot as plt
 
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("x_path", help="path to store data x", type=str)
+parser.add_argument("y_path", help="path to store data y", type=str)
+args = parser.parse_args()
+
 L = 2000
 
 '''
@@ -26,8 +32,8 @@ model.compile(optimizer='rmsprop',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-x = np.load('x.npy')
-y = np.load('y.npy')
+x = np.load(args.x_path+'.npy')
+y = np.load(args.y_path+'.npy')
 x = np.expand_dims(x, 2)
 print(x.shape, y.shape)
 history = model.fit(x, y, validation_split=0.33, epochs=100, batch_size=100)
