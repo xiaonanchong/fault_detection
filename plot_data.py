@@ -20,15 +20,15 @@ index = np.random.randint(0, L-l)
 for j in range(l):
 	f[j+index] += f1[j]
 
-	
+print('check:',f==s)
 	
 plt.figure(1)
 plt.subplot(2,2,1)
-plt.plot(s)
+plt.plot(s, 'b.')
 plt.subplot(2,2,2)
-plt.plot(f)
+plt.plot(f, 'r.')
 plt.subplot(2,2,3)
-plt.plot(f, 'r^', s, 'bo', )
+plt.plot(f, 'r.', s, 'b.', )
 plt.savefig('data.png')
 
 '''
