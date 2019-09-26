@@ -37,5 +37,5 @@ np.random.shuffle(indices)
 x = x[indices]
 y = y[indices]
 
-np.save(args[0], x)
-np.save(args[1], y)
+np.save(args[0]+'.npy', x)
+np.save(args[1]+'.npy', y)
