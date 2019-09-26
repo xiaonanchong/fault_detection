@@ -10,7 +10,8 @@ args = parser.parse_args()
 x = np.load(args.x_path+'.npy')
 y = np.load(args.y_path+'.npy')
 '''
-
+L = 2000
+l = 200
 s1 = np.random.normal(1.0, 2.0, L) 
 f1 = np.random.normal(1.0, 2.0, l)
 s = s1
