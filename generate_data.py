@@ -4,10 +4,11 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("x_path", help="path to store data x", type=str)
 parser.add_argument("y_path", help="path to store data y", type=str)
+parser.add_argument('sample_num', help='number of samples', type=int)
 args = parser.parse_args()
 
 # generate 2*N training data
-N = 10000
+N = args[2]/2
 L = 2000
 l = 200
 
