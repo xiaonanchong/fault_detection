@@ -3,6 +3,7 @@
 python generate_data.py x2 y2 500  
 
 for i in range(N):
+
 	s1 = np.random.normal(1.0, 2.0, L) 
 	s2 = np.random.normal(0.5, 2.0, L)
 	s3 = np.random.normal(2.0, 2.0, L)
