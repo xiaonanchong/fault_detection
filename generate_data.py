@@ -1,5 +1,10 @@
 import numpy as np
 import math
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("x_path", help="path to store data x", type=str)
+parser.add_argument("y_path", help="path to store data y", type=str)
+args = parser.parse_args()
 
 # generate 2*N training data
 N = 10000
@@ -32,5 +37,5 @@ np.random.shuffle(indices)
 x = x[indices]
 y = y[indices]
 
-np.save('x.npy', x)
-np.save('y.npy', y)
+np.save(args[0], x)
+np.save(args[1], y)
