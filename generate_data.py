@@ -29,8 +29,8 @@ for i in range(N):
 	
 	x[2*i] = s
 	x[2*i+1] = f
-	y[2*i] = 1
-	y[2*i+1] = 0
+	y[2*i] = [1,0]
+	y[2*i+1] = [0,1]
 
 # shuffle data
 indices = np.arange(x.shape[0])
