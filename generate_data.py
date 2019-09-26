@@ -18,7 +18,7 @@ for i in range(N):
 	s1 = np.random.normal(10, 20, L) 
 	s2 = np.random.normal(5, 20, L)
 	s3 = np.random.normal(20, 2, L)
-	f1 = np.random.normal(4, 20, l)
+	f1 = np.random.normal(10, 20, l)
 
 	s = s1 #+ s2 + s3
 	
