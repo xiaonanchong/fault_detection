@@ -23,11 +23,11 @@ for j in range(l):
 	
 	
 plt.figure(1)
-plt.subplot(211)
+plt.subplot(2,2,1)
 plt.plot(s)
-plt.subplot(212)
+plt.subplot(2,2,2)
 plt.plot(f)
-plt.subplot(213)
+plt.subplot(2,2,3)
 plt.plot(f, 'r^', s, 'bo', )
 plt.savefig('data.png')
 
