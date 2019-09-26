@@ -1,4 +1,20 @@
-# fault_detection
+# fault_detection  
+
+python generate_data.py x2 y2 500  
+
+for i in range(N):
+	s1 = np.random.normal(1.0, 2.0, L) 
+	s2 = np.random.normal(0.5, 2.0, L)
+	s3 = np.random.normal(2.0, 2.0, L)
+	f1 = np.random.normal(1.0, 2.0, l)
+
+	s = s1 #+ s2 + s3
+	
+	f = s
+	index = np.random.randint(0, L-l)
+	for j in range(l):
+		f[j+index] += f1[j]
+
 ![accuracy](https://github.com/xiaonanchong/fault_detection/blob/master/train_acc.png)
 ![loss](https://github.com/xiaonanchong/fault_detection/blob/master/train_loss.png)
 
