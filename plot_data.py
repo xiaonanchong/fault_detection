@@ -19,6 +19,18 @@ f = s
 index = np.random.randint(0, L-l)
 for j in range(l):
 	f[j+index] += f1[j]
+
+	
+	
+plt.figure(1)
+plt.subplot(211)
+plt.plot(s)
+plt.subplot(212)
+plt.plot(f)
+plt.subplot(213)
+plt.plot(f, 'r^', s, 'bo', )
+plt.savefig('data.png')
+
 '''
 plt.title("nomral signal") 
 plt.plot(s)
@@ -27,8 +39,9 @@ plt.savefig('normal_data_sample.png')
 plt.title("fault signal") 
 plt.plot(f)
 plt.savefig('fault_data_sample.png')
-'''
+
 plt.plot(f)
 plt.plot(s)
 plt.legend(['fault signal', 'normal signal'])
 plt.savefig('data_sample.png')
+'''
