@@ -28,7 +28,7 @@ model.add(MaxPooling1D(pool_size=2, strides=2, padding='valid'))
 model.add(Conv1D(filters=64, kernel_size=16, strides=4, padding='valid', activation='relu')) 
 model.add(MaxPooling1D(pool_size=2, strides=2, padding='valid')) 
 model.add(Flatten())
-model.add(Dense(1, activation='sigmoid'))
+model.add(Dense(1))
 
 model.compile(optimizer='rmsprop',
               loss='binary_crossentropy',
