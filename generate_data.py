@@ -8,7 +8,7 @@ parser.add_argument('sample_num', help='number of samples', type=int)
 args = parser.parse_args()
 
 # generate 2*N training data
-N = args[2]/2
+N = args['sample_num']/2
 L = 2000
 l = 200
 
@@ -38,5 +38,5 @@ np.random.shuffle(indices)
 x = x[indices]
 y = y[indices]
 
-np.save(args[0]+'.npy', x)
-np.save(args[1]+'.npy', y)
+np.save(args['x_path']+'.npy', x)
+np.save(args['y_path']+'.npy', y)
