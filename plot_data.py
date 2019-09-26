@@ -20,7 +20,7 @@ index = np.random.randint(0, L-l)
 for j in range(l):
 	f[j+index] += f1[j]
 
-print('check:',f==s)
+print('check:',np.array_equal(f,s))
 	
 plt.figure(1)
 plt.subplot(2,2,1)
