@@ -8,7 +8,7 @@ parser.add_argument('sample_num', help='number of samples', type=int)
 args = parser.parse_args()
 
 # generate 2*N training data
-N = args.sample_num/2
+N = args.sample_num
 L = 2000
 l = 200
 
