@@ -13,7 +13,7 @@ L = 2000
 l = 200
 
 x = np.empty((N*2, L))
-y = np.empty((N*2, 1))
+y = np.empty((N*2, 2))
 for i in range(N):
 	s1 = np.random.normal(1.0, 2.0, L) 
 	s2 = np.random.normal(0.5, 2.0, L)
