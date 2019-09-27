@@ -1,5 +1,5 @@
 # fault_detection  
-
+generate normal data and fault data  
 ![data sample](https://github.com/xiaonanchong/fault_detection/blob/master/data.png)  
 
 	_________________________________________________________________
