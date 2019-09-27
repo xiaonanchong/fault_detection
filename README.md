@@ -1,6 +1,7 @@
 # fault_detection  
 
-![data sample](https://github.com/xiaonanchong/fault_detection/blob/master/data.png)
+![data sample](https://github.com/xiaonanchong/fault_detection/blob/master/data.png)  
+
 	_________________________________________________________________
 	Layer (type)                 Output Shape              Param #
 	=================================================================
