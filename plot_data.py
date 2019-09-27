@@ -27,21 +27,24 @@ f = (s1+s2+s3)+f1
 
 print('check:',np.array_equal(f,s))
 	
+k1=-15
+k2=20
+
 plt.figure(1)
 plt.subplot(2,2,1)
-plt.ylim((-15,15))
+plt.ylim((k1,k2))
 plt.plot(s, 'b.')
 
 plt.subplot(2,2,2)
-plt.ylim((-15,15))
+plt.ylim((k1,k2))
 plt.plot(f, 'r.')
 
 plt.subplot(2,2,3)
-plt.ylim((-15,15))
+plt.ylim((k1,k2))
 plt.plot(f, 'r.', s, 'b.', )
 
 plt.subplot(2,2,4)
-plt.ylim((-15,15))
+plt.ylim((k1,k2))
 plt.plot(f1, 'g.')
 
 plt.savefig('data.png')
