@@ -24,8 +24,8 @@
 	_________________________________________________________________
 	dense_2 (Dense)              (None, 2)                 66
 	=================================================================
-![accuracy](https://github.com/xiaonanchong/fault_detection/blob/master/train_acc.png)
-![loss](https://github.com/xiaonanchong/fault_detection/blob/master/train_loss.png)
+![accuracy](https://github.com/xiaonanchong/fault_detection/blob/master/train-acc.png)
+![loss](https://github.com/xiaonanchong/fault_detection/blob/master/train-loss.png)
 
 python generate_data.py x y 1000
 
