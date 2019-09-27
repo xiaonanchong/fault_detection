@@ -18,7 +18,7 @@ for i in range(N):
 	s1 = np.random.normal(1.0, 2.0, L) 
 	s2 = np.random.normal(0.5, 2.0, L)
 	s3 = np.random.normal(2.0, 2.0, L)
-	f0 = np.random.normal(0.4, 2.0, l)
+	f0 = np.random.normal(1.4, 3.0, l)
 
 	s = (s1+s2+s3)
 	f1 = np.zeros(L)
