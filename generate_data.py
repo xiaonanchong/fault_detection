@@ -20,7 +20,7 @@ for i in range(N):
 	s3 = np.random.normal(2.0, 2.0, L)
 	f0 = np.random.normal(0.4, 2.0, l)
 
-	s = s1
+	s = (s1+s2+s3)/3.0
 	f1 = np.zeros(L)
 	index = np.random.randint(0, L-l)
 	for j in range(l):
