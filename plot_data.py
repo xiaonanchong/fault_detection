@@ -29,13 +29,21 @@ print('check:',np.array_equal(f,s))
 	
 plt.figure(1)
 plt.subplot(2,2,1)
+plt.ylim((-15,15))
 plt.plot(s, 'b.')
+
 plt.subplot(2,2,2)
+plt.ylim((-15,15))
 plt.plot(f, 'r.')
+
 plt.subplot(2,2,3)
+plt.ylim((-15,15))
 plt.plot(f, 'r.', s, 'b.', )
+
 plt.subplot(2,2,4)
+plt.ylim((-15,15))
 plt.plot(f1, 'g.')
+
 plt.savefig('data.png')
 
 '''
