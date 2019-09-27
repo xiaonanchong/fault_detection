@@ -30,7 +30,7 @@ model.add(MaxPooling1D(pool_size=2, strides=2, padding='valid'))
 model.add(Conv1D(filters=64, kernel_size=2, strides=1, padding='valid', activation='relu')) 
 model.add(MaxPooling1D(pool_size=2, strides=2, padding='valid')) 
 model.add(Flatten())
-model.add(Dense(32, activation='sigmoid'))
+model.add(Dense(32, activation='relu'))
 model.add(Dense(2, activation='softmax'))
 
 model.compile(optimizer='rmsprop',
@@ -42,7 +42,7 @@ y = np.load(args.y_path+'.npy')
 x = np.expand_dims(x, 2)
 print(x.shape, y.shape)
 
-history = model.fit(x, y, validation_split=0.33, epochs=100, batch_size=100)
+history = model.fit(x, y, validation_split=0.20, epochs=20, batch_size=100)
 print(model.summary())
 
 # list all data in history
