@@ -1,4 +1,5 @@
 # fault_detection  
+data: https://csegroups.case.edu/bearingdatacenter/pages/welcome-case-western-reserve-university-bearing-data-center-website  
 generate normal data and fault data  
 ![data sample](https://github.com/xiaonanchong/fault_detection/blob/master/data.png)  
 
